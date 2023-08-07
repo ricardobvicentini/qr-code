@@ -76,7 +76,8 @@ main {
     height: 48rem;
     padding-block: 1.5rem;
     border-radius: 2rem;
-    box-shadow: 2px 4px 5px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: -5px -5px 9px rgba(237, 246, 250, 0.911),
+    5px 5px 9px rgba(94, 104, 121, 0.3);
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -84,12 +85,13 @@ main {
 }
 
 .image-container {
+    position: relative;
     width: 27rem;
     height: 27rem;
     border-radius: 1rem;
     overflow: hidden;
     opacity: 0;
-    filter: blur(15px);
+    filter: blur(0);
     animation: show-img 600ms 1000ms ease-in forwards;
 }
 
@@ -97,6 +99,33 @@ main {
     100% {
         opacity: 1;
         filter: blur(0);
+    }
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to bottom, transparent, #ffffff1a, #ffffff75 48%, #ffffff75 52%, #ffffff1a, transparent);
+    width: 27rem;
+    height: 200%;
+    transform: translateY(-100%);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation: img-glow 8000ms 1000ms ease-in-out infinite;
+}
+
+@keyframes img-glow {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    50% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(-100%);
     }
 }
 
