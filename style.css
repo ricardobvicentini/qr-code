@@ -17,18 +17,6 @@
     --grayish-blue: hsl(220, 15%, 55%);
     --dark-blue: hsl(218, 44%, 22%);
     --blue:  hsl(216, 95%, 58%);
-
-    /* Spaces */
-    --space-m-w: clamp(30rem, calc(30rem + 4.63vw), 35rem);
-    --space-m-h: clamp(48rem, calc(43.75rem + 5.56vw), 48.75rem);
-    /* --space-m-c: clamp(27rem, calc(27rem + 5vw), 29rem); */
-    --space-m-c: clamp(27rem, 22vw, 29rem);
-    --space-m-ch: clamp(15.50rem, calc(14.42rem + 4.81vw), 18.75rem);
-
-    /* Fonts */
-    --fs-h: clamp(1.8rem, calc(1.8rem + 1vw), 2.5rem);
-    --fs-p: clamp(1.5rem, calc(1.2rem + 0.28vw), 1.8rem);
-    --fs-a: clamp(1rem, calc(1rem + 0.28vw), 2rem);
 }
 
 html {
@@ -47,6 +35,7 @@ body {
     width: 100%;
     min-height: 100vh;
     min-height: 100dvh;
+    overflow-y: hidden;
 }
 
 main {
@@ -99,6 +88,7 @@ main {
     100% {
         opacity: 1;
         filter: blur(0);
+        box-shadow: 0 0 5px var(--blue);
     }
 }
 
@@ -112,7 +102,7 @@ main {
     top: 0;
     left: 0;
     z-index: 1;
-/*     animation: img-glow 6000ms 1000ms ease-in-out infinite; */
+    animation: img-glow 6000ms 1000ms ease-in-out infinite;
 }
 
 @keyframes img-glow {
@@ -165,7 +155,7 @@ main {
 
 .attribution {
     width: 100%;
-    font-size: var(--fs-a);
+    font-size: clamp(1rem, calc(1rem + 0.28vw), 2rem);
     text-align: center;
     padding-block: .5rem;
     color: var(--dark-blue);
@@ -197,6 +187,7 @@ main {
         width: 48rem;
         height: 30rem;
         flex-direction: row;
+        justify-content: center;
         padding-inline: 1.5rem;
     }
 
@@ -211,9 +202,7 @@ main {
     }
 
     .main-container__body {
-        width: 27rem;
-        height: 16.5rem;
-        text-align: center;
+        width: 26rem;
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-evenly;
@@ -221,10 +210,12 @@ main {
 
     .main-container__body h1 {
         font-size: 2rem;
+        /* text-wrap: balance; */
     }
 
     .main-container__body p {
         font-size: 1.4rem;
+        line-height: 2.5rem;
     }
 
     .main-container__body :is(h1, p) {
