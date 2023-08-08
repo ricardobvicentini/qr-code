@@ -92,7 +92,7 @@ main {
     overflow: hidden;
     opacity: 0;
     filter: blur(0);
-    animation: show-img 600ms 1000ms ease-in forwards;
+    animation: show-img 600ms 1000ms ease-in forwards
 }
 
 @keyframes show-img {
@@ -105,27 +105,19 @@ main {
 .image-container::before {
     content: '';
     position: absolute;
-    background-image: linear-gradient(to bottom, transparent, #ffffff1a, #ffffff75 48%, #ffffff75 52%, #ffffff1a, transparent);
+    background-image: linear-gradient(to bottom, transparent 40%, #ffffff48 48%, #ffffff67, #ffffff48 55%, transparent 60%);
     width: 27rem;
     height: 200%;
     transform: translateY(-100%);
     top: 0;
     left: 0;
     z-index: 1;
-    animation: img-glow 8000ms 1000ms ease-in-out infinite;
+/*     animation: img-glow 6000ms 1000ms ease-in-out infinite; */
 }
 
 @keyframes img-glow {
-    0% {
-        transform: translateY(-100%);
-    }
-
-    50% {
-        transform: translateY(50%);
-    }
-
     100% {
-        transform: translateY(-100%);
+        transform: translateY(50%);
     }
 }
 
