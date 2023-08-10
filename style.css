@@ -182,7 +182,7 @@ main {
     text-decoration: underline;
 }
 
-@media (orientation: landscape) and (height <= 360px) {
+@media (orientation: landscape) {
     .main-container {
         width: 48rem;
         height: 30rem;
