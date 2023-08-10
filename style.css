@@ -182,7 +182,18 @@ main {
     text-decoration: underline;
 }
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (height <= 500px) {
+
+    body {
+        min-height: 100vh;
+        min-height: 100dvh;
+    }
+
+    main {
+        min-height: calc(100vh - 2.5rem);
+        min-height: calc(100dvh - 2.5rem);
+    }
+
     .main-container {
         width: 48rem;
         height: 30rem;
