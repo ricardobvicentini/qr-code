@@ -12,7 +12,11 @@ const clickHandler = () => {
     myHeading.innerHTML = "DUDE!! Don't touch it, scan it!";
     myHeading.style.color = 'orangered';
     myText.innerHTML = "I knew you'd touch it. No worries! I just wanted to show a JS function!";
-    myText.insertAdjacentHTML('beforeend', myRefreshText);
+    
+    setTimeout(function() {
+        myText.insertAdjacentHTML('beforeend', myRefreshText);
+    }, 4000);
+
     const handleClick = () => {
         window.location.reload();
     };
