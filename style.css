@@ -47,9 +47,10 @@ main {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  filter: blur(15px);
-  animation: show-main 600ms 400ms ease-in forwards;
+  /* opacity: 0; */
+  opacity: 1;
+  /* filter: blur(15px) */
+  /* animation: show-main 600ms 400ms ease-in forwards; */
 }
 
 @keyframes show-main {
@@ -79,9 +80,10 @@ main {
   height: 27rem;
   border-radius: 1rem;
   overflow: hidden;
-  opacity: 0;
+  /* opacity: 0; */
+  opacity: 1;
   filter: blur(0);
-  animation: show-img 600ms 1000ms ease-in forwards;
+  /* animation: show-img 600ms 1000ms ease-in forwards; */
 }
 
 @keyframes show-img {
@@ -109,7 +111,7 @@ main {
   top: 0;
   left: 0;
   z-index: 1;
-  animation: img-glow 6000ms 1000ms ease-in-out infinite;
+  /* animation: img-glow 6000ms 1000ms ease-in-out infinite; */
 }
 
 @keyframes img-glow {
@@ -128,9 +130,10 @@ main {
   font-size: 2.1rem;
   font-weight: 700;
   color: var(--dark-blue);
-  opacity: 0;
-  filter: blur(15px);
-  animation: show-h 600ms 1200ms ease-in forwards;
+  /* opacity: 0; */
+  opacity: 1;
+  /* filter: blur(15px) */
+  /* animation: show-h 600ms 1200ms ease-in forwards; */
 }
 
 @keyframes show-h {
@@ -143,9 +146,10 @@ main {
 .main-container__body p {
   font-size: 1.5rem;
   color: var(--grayish-blue);
-  opacity: 0;
-  filter: blur(15px);
-  animation: show-p 600ms 1500ms ease-in forwards;
+  /* opacity: 0; */
+  opacity: 1;
+  /* filter: blur(15px) */
+  /* animation: show-p 600ms 1500ms ease-in forwards; */
 }
 
 @keyframes show-p {
@@ -169,9 +173,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  filter: blur(15px);
-  animation: show-att 800ms 1800ms ease-in forwards;
+  /* opacity: 0; */
+  opacity: 1;
+  /* filter: blur(15px) */
+  /* animation: show-att 800ms 1800ms ease-in forwards; */
 }
 
 @keyframes show-att {
